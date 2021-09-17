@@ -1,0 +1,10 @@
+En el presente proyecto del Sprint 1 de la semana 2 se hace practica de Git y GitHub por medio de 4 historias
+de usuario. Ademas se conformo el equipo de 5 integrantes y se formo el tablero el Trello y para finalizar se
+creó un repositorio central para trabajar todo el ciclo 3 de MinTIC y junto al proyecto.
+
+A continuación una corta presentación de los integrantes:
+
+    *Fernando Molina Plaza(capaman9811@gmail.com, ElPeppas): soy estudiante de Ing Electrónica y Telecomuni-
+     caciones de la Universidad del Cauca. Me gusta la programación ya que es un mundo donde hay que pensar
+     con mucha claridad e idear soluciones y estrategias según el problema. Espero con el curso aprender
+     mucho con respecto al trabajo de equipo.
