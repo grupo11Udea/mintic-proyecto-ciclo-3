@@ -10,3 +10,6 @@ A continuación una corta presentación de los integrantes:
      mucho con respecto al trabajo de equipo.
 
     *Edison Arley Noreña Gómez (monoedi15)
+
+    *Diego Iván Fonseca Conde(difc.technology@gmail.com): Soy analista desarrollador Java. Actualmente trabajo
+     en una empresa llamada INDRA.
