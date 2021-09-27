@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-09-24T18:21:34.439Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.214" etag="a1aNs0XMe-21jS5bA7Ea" version="15.2.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-09-27T19:00:47.345Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36 OPR/78.0.4093.214" etag="TYXuoJi6PAbJVA6Yn50r" version="15.3.1" type="github">
   <diagram id="VxkHhNuhMuofU4TELfG2" name="Page-1">
     <mxGraphModel dx="1509" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -8,22 +8,55 @@
           <mxGeometry x="180" y="200" width="580" height="600" as="geometry" />
         </mxCell>
         <mxCell id="NPQQymwvNU5Pvd64ZGO6-3" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Administrador&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
-          <mxGeometry x="80" y="160" width="30" height="60" as="geometry" />
+          <mxGeometry x="90" y="300" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="j7om3JOUFR156DpUftkM-3" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Vendedor&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="640" y="80" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PHrGSfYcVBkAjA0Uomvq-4" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Ejecutivo&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="260" width="30" height="60" as="geometry" />
+        <mxCell id="PHrGSfYcVBkAjA0Uomvq-4" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Ejecutivo&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="440" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PHrGSfYcVBkAjA0Uomvq-5" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Operario&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="380" width="30" height="60" as="geometry" />
+        <mxCell id="PHrGSfYcVBkAjA0Uomvq-5" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Operario&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="90" y="585" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PHrGSfYcVBkAjA0Uomvq-6" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Director&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="500" width="30" height="60" as="geometry" />
+        <mxCell id="PHrGSfYcVBkAjA0Uomvq-6" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Director&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="310" y="80" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PHrGSfYcVBkAjA0Uomvq-7" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Gerente comercial&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="620" width="30" height="60" as="geometry" />
+        <mxCell id="PHrGSfYcVBkAjA0Uomvq-7" value="&lt;span style=&quot;color: rgb(33 , 33 , 33) ; font-family: &amp;#34;ibm plex sans&amp;#34; , &amp;#34;arial&amp;#34; , sans-serif , &amp;#34;apple color emoji&amp;#34; , &amp;#34;segoe ui emoji&amp;#34; , &amp;#34;segoe ui symbol&amp;#34; ; font-size: 17px ; text-align: justify ; background-color: rgb(255 , 255 , 255)&quot;&gt;Gerente comercial&lt;/span&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="80" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-2" value="Registrar un producto" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="210" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-3" value="Registrar una venta" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="450" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-4" value="Maestro de productos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-5" value="Maestro de ventas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="255" y="480" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-6" value="Maestro de usuarios" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="575" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-7" value="Registrarse en la plataforma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-8" value="Iniciar sesión en la plataforma" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="370" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-9" value="Buscar y actualizar productos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-10" value="buscar y actualizar las ventas realizadas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="380" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-11" value="Gestionar ventas (vendedor)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="560" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y6xrSqz0cjAVkDprFvkG-12" value="Ver y actualizar el rol (administrador y vendedor)&lt;br&gt; y el estado del usuario (pendiente/autorizado/no autorizado)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="640" width="250" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
