@@ -23,6 +23,7 @@
                 <img class="col-2" src="img/Logo1.jpg" alt="imagen de logo">
                 <h1 class="col text-center align-self-center text-white">Developer FESD: Gestion de ventas</h1>
                 <img class="col-2" src="img/logo2.jpg" alt="imagen de logo">
+                <script type="text/javascript" src="js/funciones.js"></script>
             </div>
         </div>
     </header>
@@ -32,7 +33,7 @@
 
 
             <div class="d-flex justify-content-center aling-item-center">
-                <form class="bg-form-container col-md-5 col-sm-11 p-4 " >
+                <form name="form1" action="" onsubmit="return validarForma(this)" class="bg-form-container col-md-5 col-sm-11 p-4 " >
                     
                     <div class="row mb-3 justify-content-center">
                        <div class="col-12 text-center"> 
@@ -43,7 +44,7 @@
                         </div>
                         
                         <div class="col-auto">
-                            <input type="text" class="col-sm form-control" id="Usuario">
+                            <input type="text" class="col-sm form-control" id="Usuario" name="usuario">
                         </div>
                     </div>
                     <div class="row mb-2 justify-content-center">
@@ -52,7 +53,7 @@
                         </div>
                         
                         <div class="col-auto">
-                            <input type="password" class="form-control small" id="Password">
+                            <input type="password" class="form-control small" id="Password" name="password">
                         </div>
                         <div class="d-flex justify-content-center">
                             <a href="#" class="p-2">Recordar contraseña</a>
