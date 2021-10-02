@@ -23,34 +23,6 @@ const Producto = ()=>{
     return(
         <>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#!">Inicio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a onClick={()=>comprar} class="nav-link active" aria-current="page" href="#!">Agregar producto</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#!">Eliminar Producto</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#!">Actualizar Producto</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link disabled" href="#!" tabindex="-1" aria-disabled="true">Buscar producto</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" href="/Venta" tabindex="-1" aria-current="page">Registrar Venta</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav>
-
          <div className="p-4">
             <table className="table table-secondary">
         <thead>
@@ -59,7 +31,6 @@ const Producto = ()=>{
             <th scope="col">Producto</th>
             <th scope="col">Descripción</th>
             <th scope="col">Precio</th>
-            <th scope="col">Comprar</th>
             </tr>
         </thead>
         <tbody>
@@ -85,6 +56,12 @@ const Producto = ()=>{
             
         </tbody>
        </table>
+       <div className="row d-flex justify-content-center">
+       <button className="col-2 m-5 btn btn-outline-success" type="submit">Crear</button>
+       <button className="col-2  m-5 btn btn-outline-primary" type="submit">Actualizar</button>
+       <button className="col-2 m-5 btn btn-outline-danger" type="submit">Borrar</button>
+
+       </div>
 </div>
    
         

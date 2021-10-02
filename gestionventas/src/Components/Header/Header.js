@@ -4,8 +4,10 @@ import Logo1 from './Logo1.jpg'
 import Logo2 from './logo2.jpg'
 
 
-const Header = () => {
+const Header = ({show}) => {
+        
     return (
+        
         
             <header>
             <div className="Contenedor" name="Header">
@@ -16,7 +18,8 @@ const Header = () => {
                     <img className="col-2" src={Logo2} alt="imagen de logo"/>
                     
                 </div>
-
+                    
+                
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -35,6 +38,7 @@ const Header = () => {
                         </ul>
                     </div>
                 </nav>
+                
             </div>
             </header>
         

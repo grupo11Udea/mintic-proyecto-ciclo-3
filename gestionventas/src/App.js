@@ -6,13 +6,19 @@ import ContenedorLoging from './Components/ContenedorLoging/ContenedorLoging';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom';
 import Producto from './Components/Producto/Producto';
-import Venta from './Components/Venta/Venta'
+import Venta from './Components/Venta/Venta';
+
 //import Ferreteria from './Components/Producto/Ferreteria/Ferreteria';
 
 function App() {
+
+
+  
+  
   return (
+        
     <>
-     <Header/>
+     <Header />
        <Footer/>
       <Router>
         <Switch>

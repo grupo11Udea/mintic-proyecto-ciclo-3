@@ -19,7 +19,7 @@ const Ferreteria = ({articulos,comprar})=>{
             <td>{articulos.nombre}</td>
             <td>{articulos.descripcion}</td>
             <td>{articulos.precio}</td>
-            <td onClick={()=>comprar(articulos)} className="btn btn-outline-dark w-100  btn-sm align-top">Comprar</td>
+            {/*<td onClick={()=>comprar(articulos)} className="btn btn-outline-dark w-100  btn-sm align-top">Comprar</td>*/}
             </tr>
 
             
