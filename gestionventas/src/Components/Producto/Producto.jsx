@@ -43,6 +43,9 @@ const Producto = ()=>{
                 <li class="nav-item">
                 <a class="nav-link disabled" href="#!" tabindex="-1" aria-disabled="true">Buscar producto</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="/Venta" tabindex="-1" aria-current="page">Registrar Venta</a>
+                </li>
             </ul>
             </div>
         </div>
