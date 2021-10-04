@@ -42,7 +42,7 @@ const ContenedorLoging = () => {
             if(elem.usuario === usuario.usuario && elem.password === usuario.password){
                 console.log('Puede ingresar')
               
-                history.push('/Producto')
+                history.push('/Home')
                 
             }
            
