@@ -8,7 +8,7 @@ import { BrowserRouter as Router,Route,Switch,Redirect } from 'react-router-dom'
 import Producto from './Components/Producto/Producto';
 import Venta from './Components/Venta/Venta';
 import Home from './Components/Home/Home';
-
+import Usuarios from './Components/Usuarios/Usuarios';
 //import Ferreteria from './Components/Producto/Ferreteria/Ferreteria';
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           <Route exact path='/Producto' component={Producto}/>
           <Route exact path='/Venta' component={Venta}/>
           <Route exact path='/Home' component={Home}/>
+          <Route exact path='/Usuarios' component={Usuarios}/>
           {/*<Route exact path='/Ferreteria' component={Ferreteria}/>*/}
         </Switch>
       </Router>

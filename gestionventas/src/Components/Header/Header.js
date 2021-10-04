@@ -27,7 +27,7 @@ const Header = ({show}) => {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item active">
-                                <a className="nav-link" href="/Producto">Inicio</a>
+                                <a className="nav-link" href="/Home">Inicio</a>
                             </li>
                             <li className="nav-item active">
                                 <a className="nav-link" href="/Producto">Producto</a>
@@ -35,9 +35,26 @@ const Header = ({show}) => {
                             <li className="nav-item active">
                                 <a className="nav-link" href="/Venta">Ventas</a>
                             </li>
+                            <li className="nav-item dropdown">
+                             <a className="nav-link dropdown-toggle" href="/Usuarios" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                       Usuarios
+                            </a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                     <li><a className="dropdown-item" href="#!">Usuarios</a></li>
+                                    <li><a className="dropdown-item" href="#!">Clientes</a></li>
+                                    
+                                </ul>
+                                </li>
+
+                            
                         </ul>
                     </div>
                 </nav>
+
+                
+
+                
+
                 
             </div>
             </header>
