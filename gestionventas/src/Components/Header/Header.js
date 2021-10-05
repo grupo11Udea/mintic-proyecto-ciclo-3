@@ -1,25 +1,23 @@
-import React from 'react'
-import './Encabezado.css'
-import Logo1 from './Logo1.jpg'
-import Logo2 from './logo2.jpg'
+import React from 'react';
+import './Encabezado.css';
+import Dropdown from 'react-bootstrap/Dropdown';
+import Logo1 from './Logo1.jpg';
+import Logo2 from './logo2.jpg';
 
 
-const Header = ({show}) => {
-        
+const Header = ({ show }) => {
+
     return (
-        
-        
-            <header>
+        <header>
             <div className="Contenedor" name="Header">
-                <div className="row">
-                   
-                   <img className="col-2" src={Logo1} alt="imagen de logo"/>
-                    <h1 className="col text-center align-self-center text-white">Developer FESD: Gestion de ventas</h1>
-                    <img className="col-2" src={Logo2} alt="imagen de logo"/>
-                    
+                <div className="row header-title justify-content-between no-gutters" >
+
+                    <img className="col-2 .no-gutters" src={Logo1} alt="imagen de logo" />
+                    <h1 className="col-8 text-center align-self-center text-white">Developer FESD: Gestion de ventas</h1>
+                    <img className="col-2 .no-gutters" src={Logo2} alt="imagen de logo" />
+
                 </div>
-                    
-                
+
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -35,31 +33,23 @@ const Header = ({show}) => {
                             <li className="nav-item active">
                                 <a className="nav-link" href="/Venta">Ventas</a>
                             </li>
-                            <li className="nav-item dropdown">
-                             <a className="nav-link dropdown-toggle" href="/Usuarios" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                       Usuarios
-                            </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                     <li><a className="dropdown-item" href="#!">Usuarios</a></li>
-                                    <li><a className="dropdown-item" href="#!">Clientes</a></li>
-                                    
-                                </ul>
-                                </li>
+                            <Dropdown>
+                                <Dropdown.Toggle as="a" id="dropdown-basic" className="nav-link header-dropdown">
+                                    Usuarios
+                                </Dropdown.Toggle>
 
-                            
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="#/">Usuarios</Dropdown.Item>
+                                    <Dropdown.Item href="#/">Clientes</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+
+
                         </ul>
                     </div>
                 </nav>
-
-                
-
-                
-
-                
             </div>
-            </header>
-        
-        
+        </header>
     )
 }
 export default Header

@@ -1,49 +1,53 @@
 import React from 'react'
-import fondo from '../Imagenes/fondo.jpg';
-import Logo1 from '../Imagenes/Logo1.jpg';
-import Logo2 from '../Imagenes/logo2.jpg';
+import Carousel from 'react-bootstrap/Carousel'
+import slideImage1 from '../../assets/images/Logo1.jpg';
+import slideImage2 from '../../assets/images/logo2.jpg';
+import slideImage3 from '../../assets/images/ABSTRACT_BACKGROUND_01.jpg';
+import './home.css'
 
 function Home() {
     return (
         
-        <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div className="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div className="carousel-inner row d-flex" >
-    <div className="carousel-item active" data-bs-interval="10000">
-      <img src={Logo1} className="d-block w-50" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item" data-bs-interval="2000">
-      <img src={Logo2} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <img src={fondo} className="d-block w-100" alt="..."/>
-      <div className="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
+      <Carousel
+       interval="3000"
+      >
+      <Carousel.Item className="carousel-item">
+        <img
+          className="d-block w-100"
+          src={slideImage1}
+          alt="First slide"
+          
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className="carousel-item">
+        <img
+          className="d-block w-100"
+          src={slideImage2}
+          alt="Second slide"
+        />
+    
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className="carousel-item">
+        <img
+          className="d-block w-100"
+          src={slideImage3}
+          alt="Third slide"
+        />
+    
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
         
     )
 }
