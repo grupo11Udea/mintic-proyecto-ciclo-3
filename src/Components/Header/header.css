@@ -1,0 +1,21 @@
+header {
+  background-image: url("../../assets/images/ABSTRACT_BACKGROUND_01.jpg");
+  height: 9rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.header-title {
+  width: 100%;
+}
+
+.header-dropdown {
+  cursor: pointer;
+}
+
+.no-gutters {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
