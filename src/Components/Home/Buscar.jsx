@@ -12,6 +12,7 @@ const Buscar = ({keyword, setKeyword, keyword2, setKeyword2}) => {
     console.log(e.target.value);
     setKeyword2(e.target.value);
   };
+
   
   return (
     <div id="bodyProducto" className="container-fluid">
