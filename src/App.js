@@ -9,12 +9,15 @@ import Home from './Components/Home/Home';
 import Usuarios from './Components/Home/Usuarios';
 import './app.css';
 
+
 //import Ferreteria from './Components/Producto/Ferreteria/Ferreteria';
 
 function App() {
+  
   return (
     <>
       <Header />
+     
       <Footer />
       <Router>
         <Switch>
