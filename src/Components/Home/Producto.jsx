@@ -6,7 +6,6 @@ import ProductoDetalle from "./Productodetalle";
 
 const Producto = () => {
 
-
   const [keyword, setKeyword] = useState('');
   const [keyword2, setKeyword2] = useState('');
   

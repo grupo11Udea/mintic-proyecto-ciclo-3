@@ -3,7 +3,6 @@ import ProductosFerreteria from "./ProductosFerreteria";
 
 
 
-
 const ProductoDetalle = ({keyword, keyword2}) => {
     const [productos, setProductos] = useState([]);
     useEffect(() => {
