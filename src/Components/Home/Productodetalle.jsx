@@ -65,7 +65,7 @@ const ProductoDetalle = ({ keyword, keyword2, checkValues, setCheckValues }) => 
 
       <div className="p-3">
         <div id="Advertencia de filtros"></div>
-        <Button variant="outline-primary" id="Borrar filtros" onClick={actualizarProductos}>Quitar Filtro</Button>
+        <Button variant="outline-primary" id="Borrar filtros" style={{display: 'none'}} onClick={actualizarProductos}>Quitar Filtro</Button>
         <table className="table table-secondary table-hover" >
           <thead>
             <tr>
