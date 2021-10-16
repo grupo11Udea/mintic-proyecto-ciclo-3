@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-/* import Dropdown from 'react-bootstrap/Dropdown'; */
+
 
 const Navbar = ({ show }) => {
     return (
@@ -22,15 +22,7 @@ const Navbar = ({ show }) => {
                     <li className="nav-item active">
                         <Link className="nav-link" to="/Usuarios">Usuarios</Link>
                     </li>
-                    {/* <Dropdown>
-                        <Dropdown.Toggle as="a" id="dropdown-basic" className="nav-link header-dropdown">
-                            Usuarios
-                        </Dropdown.Toggle>
-                        <Dropdown.Menu>
-                            <Dropdown.Item href="/Usuarios">Usuarios</Dropdown.Item>
-                            <Dropdown.Item href="#/">Clientes</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown> */}
+                    
                 </ul>
             </div>
         </nav>

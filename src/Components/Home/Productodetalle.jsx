@@ -3,12 +3,13 @@ import ProductosFerreteria from "./ProductosFerreteria";
 
 
 
-const ProductoDetalle = ({keyword, keyword2}) => {
+const ProductoDetalle = ({keyword, keyword2, checkValues, setCheckValues}) => {
+    
     const [productos, setProductos] = useState([]);
     useEffect(() => {
         if (keyword !== "" || keyword2 !== "") {
           console.log("keyword", keyword);
-          fetch(`http://localhost:5000/api/getByName/?nombre=${keyword}&id=${keyword2}`)
+          fetch(`http://localhost:5000/api/productos/getByName/?nombre=${keyword}&id=${keyword2}`)
             .then((response) => response.json())
             .then((data) => {
               console.log("response", data);
@@ -18,7 +19,7 @@ const ProductoDetalle = ({keyword, keyword2}) => {
               console.log("error");
             });
         } else {
-          fetch("http://localhost:5000/api/")
+          fetch("http://localhost:5000/api/productos")
             .then((response) => response.json())
             .then((data) => {
               console.log("response", data);
@@ -29,40 +30,34 @@ const ProductoDetalle = ({keyword, keyword2}) => {
             });
           console.log(productos);
         }
-      }, [keyword, keyword2]);
+      }, [keyword, keyword2, productos]);
   
   return (
-    <>
-        <div className="producto p-3">
-        <table className="table table-secondary">
+    <>  
+        <div className="p-3">
+        <table className="table table-secondary table-hover" >
           <thead>
             <tr>
+             
               <th scope="col">#</th>
               <th scope="col">Producto</th>
               <th scope="col">Descripción</th>
               <th scope="col">Valor unitario</th>
               <th scope="col">Estado</th>
               <th scope="col">Usuario</th>
+              <th scope="col">Select</th>
+              
+              
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {productos.map((producto) => {
-              return <ProductosFerreteria articulos={producto} />;
+              return <ProductosFerreteria articulos={producto} checkValues={checkValues} setCheckValues={setCheckValues} />;
             })}
           </tbody>
-        </table>
+        </table> 
 
-        <div className="row d-flex justify-content-center">
-          <button className="col-2 m-5 btn btn-outline-success" type="submit">
-            Crear
-          </button>
-          <button className="col-2  m-5 btn btn-outline-primary" type="submit">
-            Actualizar
-          </button>
-          <button className="col-2 m-5 btn btn-outline-danger" type="submit">
-            Borrar
-          </button>
-        </div>
+        
       </div>
     </>
   );

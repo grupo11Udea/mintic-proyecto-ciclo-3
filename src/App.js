@@ -18,7 +18,7 @@ function App() {
     <>
       <Header />
      
-      <Footer />
+     
       <Router>
         <Switch>
           <Route exact path="/">
@@ -32,6 +32,7 @@ function App() {
           {/*<Route exact path='/Ferreteria' component={Ferreteria}/>*/}
         </Switch>
       </Router>
+      <Footer />
     </>
   );
 }

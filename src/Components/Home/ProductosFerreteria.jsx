@@ -2,8 +2,15 @@ import React from 'react'
 
 
 
-const Ferreteria = ({ articulos}) => {
 
+const Ferreteria = ({ articulos, checkValues, setCheckValues}) => {
+    
+
+    
+    const removeSelect = (e)=>{
+        setCheckValues(e)
+        console.log('checkValues', e)
+    }
     
     return (
         <>
@@ -11,13 +18,15 @@ const Ferreteria = ({ articulos}) => {
                 
             }
             <tr>
-                <th scope="row">{articulos.id}</th>
+                <th >{articulos.id}</th>
                 <td>{articulos.nombre}</td>
                 <td>{articulos.descripcion}</td>
                 <td>{articulos.valor_unitario}</td>
                 <td>{articulos.estado}</td>
                 <td>{articulos.usuario}</td>
-                {/*<td onClick={()=>comprar(articulos)} className="btn btn-outline-dark w-100  btn-sm align-top">Comprar</td>*/}
+                
+                <td><input onClick={()=>{removeSelect(articulos)}} name="id" class="form-check-input-secondary" type="radio"/>
+                </td>
             </tr>
 
 
