@@ -20,7 +20,7 @@ const ActualizarProducto = ({actualizar, setActualizar}) => {
 
     console.log('Actualizar id prueba', actualizar)
   
-    fetch(`http://localhost:5000/api/productos/${actualizar.id}`,{
+    fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos/${actualizar.id}`,{
         method: 'PUT',
         body: JSON.stringify(actualizar),
 

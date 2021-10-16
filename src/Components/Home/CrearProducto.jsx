@@ -20,7 +20,7 @@ const CrearProductos = () => {
     e.preventDefault();
     console.log('formValues', formValues)
   
-      fetch("http://localhost:5000/api/productos",{
+      fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos`,{
         method: 'POST',
         body: JSON.stringify(formValues),
         headers:{

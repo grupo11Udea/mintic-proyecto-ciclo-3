@@ -8,7 +8,7 @@ const BorrarProducto = (borraId) => {
     
     console.log('Borrar id prueba', borraId.borraId.id)
     
-   fetch(`http://localhost:5000/api/productos/${borraId.borraId.id}`,{
+   fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos/${borraId.borraId.id}`,{
         method: 'DELETE',
         
         headers:{
