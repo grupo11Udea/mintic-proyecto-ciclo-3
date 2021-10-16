@@ -22,7 +22,7 @@ const Ferreteria = ({ articulos, checkValues, setCheckValues}) => {
                 <td>{articulos.estado}</td>
                 <td>{articulos.usuario}</td>
                 
-                <td><input onClick={()=>{removeSelect(articulos)}} name="id" class="form-check-input-secondary" type="radio"/>
+                <td><input onClick={()=>{removeSelect(articulos)}} name="id" className="form-check-input-secondary" type="radio"/>
                 </td>
             </tr>
         </>

@@ -5,7 +5,7 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 
 const ActualizarProducto = ({actualizar, setActualizar}) => {
-    console.log('info producto', actualizar.id)
+    console.log('info actualizar producto', actualizar.id)
   
  
   
