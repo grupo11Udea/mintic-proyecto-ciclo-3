@@ -9,17 +9,16 @@ import Home from './Components/Home/Home';
 import Usuarios from './Components/Home/Usuarios';
 import './app.css';
 
-
 //import Ferreteria from './Components/Producto/Ferreteria/Ferreteria';
 
 function App() {
   
   return (
     <>
+    <div className="app-container">
       <Header />
-     
-      <Footer />
-      <Router>
+      <div>
+      <Router className="app-router">
         <Switch>
           <Route exact path="/">
             <Redirect to="/Login" />
@@ -32,6 +31,9 @@ function App() {
           {/*<Route exact path='/Ferreteria' component={Ferreteria}/>*/}
         </Switch>
       </Router>
+      </div>
+      <Footer className="app-footer"/>
+    </div>
     </>
   );
 }

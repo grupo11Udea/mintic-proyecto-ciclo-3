@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import ProductosFerreteria from "./ProductosFerreteria";
 
-
-
 const ProductoDetalle = ({keyword, keyword2}) => {
     const [productos, setProductos] = useState([]);
     useEffect(() => {
         if (keyword !== "" || keyword2 !== "") {
           console.log("keyword", keyword);
-          fetch(`http://localhost:5000/api/getByName/?nombre=${keyword}&id=${keyword2}`)
+          fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos`)
             .then((response) => response.json())
             .then((data) => {
               console.log("response", data);
@@ -18,7 +16,7 @@ const ProductoDetalle = ({keyword, keyword2}) => {
               console.log("error");
             });
         } else {
-          fetch("http://localhost:5000/api/")
+          fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos`)
             .then((response) => response.json())
             .then((data) => {
               console.log("response", data);
@@ -47,7 +45,7 @@ const ProductoDetalle = ({keyword, keyword2}) => {
           </thead>
           <tbody>
             {productos.map((producto) => {
-              return <ProductosFerreteria articulos={producto} />;
+              return <ProductosFerreteria articulos={producto} key={producto.id}/>;
             })}
           </tbody>
         </table>

@@ -7,9 +7,6 @@ const Ferreteria = ({ articulos}) => {
     
     return (
         <>
-            {
-                
-            }
             <tr>
                 <th scope="row">{articulos.id}</th>
                 <td>{articulos.nombre}</td>
@@ -19,9 +16,6 @@ const Ferreteria = ({ articulos}) => {
                 <td>{articulos.usuario}</td>
                 {/*<td onClick={()=>comprar(articulos)} className="btn btn-outline-dark w-100  btn-sm align-top">Comprar</td>*/}
             </tr>
-
-
-
         </>
     );
 }

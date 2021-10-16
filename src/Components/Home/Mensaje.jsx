@@ -7,7 +7,7 @@ function Mensaje({ show, handleClose, handleShow, mensaje }) {
     <>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Registro exitoso</Modal.Title>
         </Modal.Header>
         <Modal.Body><div className="alert alert-success">{mensaje}</div></Modal.Body>
         <Modal.Footer>

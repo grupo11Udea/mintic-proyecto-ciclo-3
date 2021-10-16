@@ -1,24 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button'
+import UsuarioEditar from './UsuarioEditar'
 
-const UsuarioCard = ({ usuarios }) => {
+const UsuarioCard = ({ usuarios, deleteFunction, editUser }) => {
+    const [showModalEditar, setShowModalEditar] = useState(false)
+    const deleteUser = async (userId) => {
+        await fetch(process.env.REACT_APP_BACKEND_PATH + '/usuarios/' + userId, {
+            method: 'DELETE',
+        });
+        deleteFunction(usuarios.id)
+    }
+
+    function mostrarRolUsuario(id){
+        if (id == 4) {
+            return 'Administrador'
+        } else if (id == 14 ) {
+            return 'Vendedor'
+        } else if (id == 24) {
+            return 'Director'
+        } else {
+            return 'Desconocido'
+        }
+    }
 
     return (
         <>
-            {/*   <div class="card" style={{width: '18rem'}}>
-            
-            <div class="card-body">
-                <h5 class="card-title">{articulos.nombre}</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" class="btn btn-primary">Go somewhere</a>
-            </div>
-</div>*/}
+        <UsuarioEditar usuarios={usuarios} setShowModalEditar={setShowModalEditar} show={showModalEditar} editUserFunction={user => editUser(user)}/>
             <tr>
-                <th scope="row">{usuarios.idUsuario}</th>
-                <td>{usuarios.usuario}</td>
-                <td>{usuarios.descripcion}</td>
-                <td>{usuarios.rol}</td>
-                <td>{usuarios.password}</td>
-                {/*<td onClick={()=>comprar(articulos)} className="btn btn-outline-dark w-100  btn-sm align-top">Comprar</td>*/}
+                <th scope="row">{usuarios.id}</th>
+                <td>{usuarios.login}</td>
+                <td>{mostrarRolUsuario(usuarios.rol)}</td>
+                <td>
+                    <Button variant="outline-primary" onClick={() => setShowModalEditar(true)}>Editar</Button>
+                    <span>    </span>
+                    <Button variant="outline-danger" onClick={() => deleteUser(usuarios.id)}>Borrar</Button>
+                </td>
             </tr>
 
         </>
