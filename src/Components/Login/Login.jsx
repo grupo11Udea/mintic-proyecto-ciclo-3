@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom";
 import './login.css'
+import GoogleLogin from 'react-google-login';
+import cookie from 'react-cookies'
 
 const ContenedorLoging = () => {
 
@@ -30,6 +32,15 @@ const ContenedorLoging = () => {
             ...usuario,
             [e.target.name]: e.target.value
         })
+    }
+
+    const responseGoogle = async (response) => {
+        console.log('responseGoogle', response);
+        if (response.tokenId) {
+            cookie.save('token', response.tokenId);
+            history.push('/Home')
+
+        }
     }
 
     const sendForm = () => {
@@ -88,6 +99,13 @@ const ContenedorLoging = () => {
 
                                 <div className="boton d-flex justify-content-center">
                                     <button onClick={sendForm} type="button" className="btn btn-secondary col-md-4 justify-content-center ">Ingresar</button>
+                                    <GoogleLogin
+                                        clientId="915077473271-980jcc517trddtukueb75d72rgc2ru03.apps.googleusercontent.com"
+                                        buttonText="Login"
+                                        onSuccess={responseGoogle}
+                                        onFailure={responseGoogle}
+                                        cookiePolicy={'single_host_origin'}
+                                    />
                                 </div>
                                 {
                                     error !== '' &&
@@ -99,6 +117,7 @@ const ContenedorLoging = () => {
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
         </div>

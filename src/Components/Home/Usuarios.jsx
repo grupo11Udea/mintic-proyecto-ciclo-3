@@ -13,7 +13,7 @@ const Usuarios = () => {
     const [usuarios, setUsuarios] = useState([])
     const [showModal, setShowModal] = useState(false)
     const getUsers = () => {
-        fetch(process.env.REACT_APP_BACKEND_PATH + '/usuarios').then(data => data.json()).then(response => setUsuarios(response)), []
+        fetch(process.env.REACT_APP_BACKEND_PATH + '/usuarios').then(data => data.json()).then(response => setUsuarios(response))
     }
     useEffect(() =>
         getUsers(), []

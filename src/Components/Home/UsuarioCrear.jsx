@@ -6,11 +6,12 @@ import './usuarioCrear.css'
 const UsuarioCrear = ({ show, setShowModal, addUser }) => {
 
 
-    const [newUser, setNewUser] = useState({ login: '', password: '', rol: '' })
+    const [newUser, setNewUser] = useState({ login: '', password: '', id_rol: '' })
     const crearUsuario = async () => {
         let body = { ...newUser }
-        body.estado = 4
-        body.vendedor = "80859699"
+        console.log(body);
+        body.id_estado = 1
+        //body.vendedor = "80859699"
 
         const response = await fetch(process.env.REACT_APP_BACKEND_PATH + '/usuarios', {
             method: 'POST',
@@ -21,6 +22,7 @@ const UsuarioCrear = ({ show, setShowModal, addUser }) => {
             body: JSON.stringify(body)
         });
         const createdUser = await response.json().then(data => data)
+        console.log(createdUser);
         addUser(createdUser)
         setShowModal(false)
     }
@@ -42,11 +44,10 @@ const UsuarioCrear = ({ show, setShowModal, addUser }) => {
                         <label htmlFor="password">Contraseña</label>
                         <input name="password" type="password" placeholder="Contraseña" onChange={handleInputChange} required/>
                         <label htmlFor="rol">Rol del usuario</label>
-                        <select name="rol" onChange={handleInputChange} placeholder="Rol del usuario" required>
+                        <select name="id_rol" onChange={handleInputChange} placeholder="Rol del usuario" required>
                             <option selected></option>
-                            <option value="4">Administrador</option>
-                            <option value="14">Vendedor</option>
-                            <option value="24">Director</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Vendedor</option>
                         </select>
                     </form></Modal.Body>
                 <Modal.Footer>

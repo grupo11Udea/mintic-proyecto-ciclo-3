@@ -17,7 +17,8 @@ const ActualizarProducto = ({actualizar, setActualizar}) => {
   }
 
   const update = (e)=>{
-
+    console.log(e);
+    console.log(actualizar);
     console.log('Actualizar id prueba', actualizar)
   
     fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos/${actualizar.id}`,{
@@ -31,13 +32,12 @@ const ActualizarProducto = ({actualizar, setActualizar}) => {
       }).then((response) => response.json())
               .then((data) => {
                 console.log("response", data);
-              
+                window.location.reload(false);  
               })
               .catch((error) => {
                 console.log("error");
               });
 
-             window.location.reload(false);  
     }
            
 

@@ -7,6 +7,8 @@ import Producto from './Components/Home/Producto';
 import Venta from './Components/Home/Venta';
 import Home from './Components/Home/Home';
 import Usuarios from './Components/Home/Usuarios';
+import ProtectedRoute from './Components/Login/ProtectedRoute';
+import ActualizacionVenta from './Components/Home/ActualizacionVenta';
 import './app.css';
 
 //import Ferreteria from './Components/Producto/Ferreteria/Ferreteria';
@@ -24,10 +26,11 @@ function App() {
             <Redirect to="/Login" />
           </Route>
           <Route exact path='/Login' component={Login} />
-          <Route exact path='/Producto' component={Producto} />
-          <Route exact path='/Venta' component={Venta} />
-          <Route exact path='/Home' component={Home} />
-          <Route exact path='/Usuarios' component={Usuarios} />
+          <ProtectedRoute exact path='/Producto' component={Producto} />
+          <ProtectedRoute exact path='/Venta' component={Venta} />
+          <ProtectedRoute exact path='/Home' component={Home} />
+          <ProtectedRoute exact path='/Usuarios' component={Usuarios} />
+          <ProtectedRoute exact path='/ActualizarVenta' component={ActualizacionVenta} />
           {/*<Route exact path='/Ferreteria' component={Ferreteria}/>*/}
         </Switch>
       </Router>

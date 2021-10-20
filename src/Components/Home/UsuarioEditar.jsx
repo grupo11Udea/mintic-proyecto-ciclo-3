@@ -6,7 +6,7 @@ import './usuarioCrear.css'
 const UsuarioEditar = ({ usuarios, setShowModalEditar, show, editUserFunction }) => {
 
 
-    const [editUser, setEditUser] = useState({ login: '', password: '', rol: '' })
+    const [editUser, setEditUser] = useState({ login: '', password: '', id_rol: '' })
     const editarUsuario = async () => {
         let body = { ...editUser }
         let keys = Object.keys(body)
@@ -43,11 +43,10 @@ const UsuarioEditar = ({ usuarios, setShowModalEditar, show, editUserFunction })
                         <input name="login" type="text" placeholder="nickname" onChange={handleInputChange} />
                         <input name="password" type="password" placeholder="password" onChange={handleInputChange} />
                         <label htmlFor="rol">Rol del usuario</label>
-                        <select name="rol" onChange={handleInputChange} placeholder="Rol del usuario" required>
+                        <select name="id_rol" onChange={handleInputChange} placeholder="Rol del usuario" required>
                             <option selected></option>
-                            <option value="4">Administrador</option>
-                            <option value="14">Vendedor</option>
-                            <option value="24">Director</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Vendedor</option>
                         </select>
                     </form></Modal.Body>
                 <Modal.Footer>

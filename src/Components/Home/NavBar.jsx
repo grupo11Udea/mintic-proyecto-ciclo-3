@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const Navbar = ({ show }) => {
     return (
@@ -15,9 +16,10 @@ const Navbar = ({ show }) => {
                     <li className="nav-item active">
                         <Link className="nav-link" to="/Producto">Producto</Link>
                     </li>
-                    <li className="nav-item active">
-                        <Link className="nav-link" to="/Venta">Ventas</Link>
-                    </li>
+                    <NavDropdown title="Ventas" id="nav-dropdown">
+                        <Link className="nav-link" to="/Venta">VentaBD</Link>
+                        <Link className="nav-link" to="/ActualizarVenta">Actualizar Venta</Link>
+                    </NavDropdown>
                     <li className="nav-item active">
                         <Link className="nav-link" to="/Usuarios">Usuarios</Link>
                     </li>

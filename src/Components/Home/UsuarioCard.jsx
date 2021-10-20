@@ -12,12 +12,10 @@ const UsuarioCard = ({ usuarios, deleteFunction, editUser }) => {
     }
 
     function mostrarRolUsuario(id){
-        if (id == 4) {
+        if (id == 1) {
             return 'Administrador'
-        } else if (id == 14 ) {
+        } else if (id == 2 ) {
             return 'Vendedor'
-        } else if (id == 24) {
-            return 'Director'
         } else {
             return 'Desconocido'
         }
@@ -29,7 +27,7 @@ const UsuarioCard = ({ usuarios, deleteFunction, editUser }) => {
             <tr>
                 <th scope="row">{usuarios.id}</th>
                 <td>{usuarios.login}</td>
-                <td>{mostrarRolUsuario(usuarios.rol)}</td>
+                <td>{mostrarRolUsuario(usuarios.id_rol)}</td>
                 <td>
                     <Button variant="outline-primary" onClick={() => setShowModalEditar(true)}>Editar</Button>
                     <span>    </span>
