@@ -1,0 +1,21 @@
+.galleryComponent{
+    padding: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    border: 1px solid rgb(167, 167, 167);
+    flex-wrap: wrap;
+    display: inline-flex;
+}
+
+.itemProduct{
+    width: 24%;
+    height: 200px;
+    border: 1px solid rgb(167, 167, 167);
+    margin-right: 10px;
+}
+
+.btnPagar{
+    width: 80%;
+}

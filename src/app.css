@@ -1,0 +1,11 @@
+.app-container{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  background-color: rgb(246, 246, 255);
+}
+
+.app-footer{
+  grid-row: foo;
+}
