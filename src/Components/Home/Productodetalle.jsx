@@ -4,16 +4,20 @@ import Button from 'react-bootstrap/Button';
 
 
 
-const ProductoDetalle = ({ keyword, keyword2, checkValues, setCheckValues }) => {
+const ProductoDetalle = ({ keyword, keyword2, checkValues, setCheckValues, setKeyword, setKeyword2, consulProductos, setConsulProductos}) => {
   let advertenciaFiltros = document.getElementById('Advertencia de filtros');
   let botonBorrarFiltros = document.getElementById('Borrar filtros')
   function actualizarProductos(e) {
     e.preventDefault();
+    
     fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos`)
       .then((response) => response.json())
       .then((data) => {
         console.log("response fetch", data);
         setProductos(data);
+        setConsulProductos(false);
+        setKeyword('');
+        setKeyword2('');
       })
       .catch((error) => {
         console.log("error");
@@ -46,26 +50,31 @@ const ProductoDetalle = ({ keyword, keyword2, checkValues, setCheckValues }) => 
         .then((data) => {
           console.log("response fetch", data);
           setProductos(data);
+         
         })
         .catch((error) => {
           console.log("error");
         });
       console.log(productos);
     }
+ 
   }
 
 
   const [productos, setProductos] = useState([]);
+  
   useEffect(() => {
+    if(consulProductos){
     obtenerProductos(keyword, keyword2)
-  }, [keyword, keyword2]);
+  }
+  }, [consulProductos]);
 
   return (
     <>
 
       <div className="p-3">
         <div id="Advertencia de filtros"></div>
-        <Button variant="outline-primary" id="Borrar filtros" style={{display: 'none'}} onClick={actualizarProductos}>Quitar Filtro</Button>
+        <Button  className=" m-3"variant="outline-primary" id="Borrar filtros" style={{display: 'none'}} onClick={actualizarProductos}>Quitar Filtro</Button>
         <table className="table table-secondary table-hover" >
           <thead>
             <tr>

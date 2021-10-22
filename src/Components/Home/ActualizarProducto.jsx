@@ -73,7 +73,7 @@ const ActualizarProducto = ({actualizar, setActualizar}) => {
           <Form.Control className="mb-3" onChange={changeField} value={actualizar.estado} name="estado" type="text" placeholder="Estado " />
           </Col>
           <Col>
-          <Form.Control className="mb-3" onChange={changeField} value={actualizar.usuario} name="usuario" type="number" placeholder="Usuario" />
+          <Form.Control className="mb-3" onChange={changeField} value={actualizar.id_usuario} name="usuario" type="number" placeholder="Usuario" />
           </Col>
           <Col>
           <Button type="button" onClick={update} variant="outline-primary" >

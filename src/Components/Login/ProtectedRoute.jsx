@@ -4,7 +4,7 @@ import cookie from 'react-cookies'
 const { OAuth2Client } = require('google-auth-library');
 
 
-const CLIENT_ID = '915077473271-980jcc517trddtukueb75d72rgc2ru03.apps.googleusercontent.com';
+const CLIENT_ID = '684413555776-e2h8a8e6cnr3u15k9qaoh2sssd3soidr.apps.googleusercontent.com';
 
 const ProtectedRoute = ({ ...props }) => {
     //componente prop

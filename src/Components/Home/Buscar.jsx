@@ -5,13 +5,14 @@ import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
 
 
-const Buscar = ({ keyword, setKeyword, keyword2, setKeyword2 }) => {
+const Buscar = ({ keyword, setKeyword, keyword2, setKeyword2, consulProductos,  setConsulProductos}) => {
   let auxKeyword;
   let auxKeyword2;
   const changueInput = (e) => {
     //console.log(e.target.value);
     //setKeyword(e.target.value);
     auxKeyword = e.target.value;
+    
   };
   const changueInput2 = (e) => {
     //console.log(e.target.value);
@@ -23,12 +24,14 @@ const Buscar = ({ keyword, setKeyword, keyword2, setKeyword2 }) => {
     setKeyword(auxKeyword);
     let inputNombre = document.getElementById('input nombre');
     inputNombre.value = ''
+    setConsulProductos(true);
   }
   function sendKeyword2(e) {
     e.preventDefault();
     setKeyword2(auxKeyword2);
     let inputProducto = document.getElementById('input producto');
     inputProducto.value = ''
+    setConsulProductos(true);
   }
 
   return (

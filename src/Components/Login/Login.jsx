@@ -136,7 +136,7 @@ const ContenedorLoging = () => {
                                 <div className="boton d-flex justify-content-center">
                                     <button onClick={sendForm} type="button" className="btn btn-secondary col-md-4 justify-content-center ">Ingresar</button>
                                     <GoogleLogin
-                                        clientId="915077473271-980jcc517trddtukueb75d72rgc2ru03.apps.googleusercontent.com"
+                                        clientId="684413555776-e2h8a8e6cnr3u15k9qaoh2sssd3soidr.apps.googleusercontent.com"
                                         buttonText="Login"
                                         onSuccess={responseGoogle}
                                         onFailure={responseGoogle}

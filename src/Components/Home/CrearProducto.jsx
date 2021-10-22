@@ -31,12 +31,13 @@ const CrearProductos = () => {
               .then((data) => {
                 console.log("response", data);
                 setFormValues(data);
+                window.location.reload(false); 
               })
               .catch((error) => {
                 console.log("error");
               });
     
-              //window.location.reload(false); 
+              
 
 
   }
