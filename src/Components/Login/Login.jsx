@@ -36,11 +36,47 @@ const ContenedorLoging = () => {
 
     const responseGoogle = async (response) => {
         console.log('responseGoogle', response);
-        if (response.tokenId) {
-            cookie.save('token', response.tokenId);
-            history.push('/Home')
+        console.log('responseGoogle', response.profileObj.email);
 
+        let usuarioBD = {};
+        if (response.tokenId) {
+            let usuario = await fetch(process.env.REACT_APP_BACKEND_PATH + `/usuarios/getUsuarioByLogin/${response.profileObj.email}`);
+            if(usuario.ok){
+               console.log('Lo encontro'); 
+               usuarioBD = await usuario.json();
+            }else{
+                let respuestaCreacionUsuario = await crearUsuario(response.profileObj.email);
+                if(respuestaCreacionUsuario.ok){
+                    console.log('Se creo correctamente');
+                    usuarioBD = await respuestaCreacionUsuario.json();
+                }else{
+                    console.log('Falló');
+                }
+            }
+            sessionStorage.setItem('login', usuarioBD[0].id);
+            cookie.save('token', response.tokenId);
+            history.push('/Home');
         }
+    }
+
+    const crearUsuario = async (login) => {
+        let body = {}
+        body.login=login;
+        body.id_estado = 1
+        body.id_rol = 2
+        console.log(body);
+        //body.vendedor = "80859699"
+
+        const response = await fetch(process.env.REACT_APP_BACKEND_PATH + '/usuarios', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+
+        return response;
     }
 
     const sendForm = () => {

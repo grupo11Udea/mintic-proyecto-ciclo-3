@@ -17,13 +17,12 @@ const BorrarProducto = (borraId) => {
       }).then((response) => response.json())
               .then((data) => {
                 console.log("response", data);
-              
+                window.location.reload(false);  
               })
               .catch((error) => {
                 console.log("error");
               });
 
-              window.location.reload(false);  
     }
      
  

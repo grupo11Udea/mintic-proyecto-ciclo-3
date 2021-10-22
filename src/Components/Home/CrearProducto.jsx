@@ -19,10 +19,11 @@ const CrearProductos = () => {
   const submit = (e)=>{
     e.preventDefault();
     console.log('formValues', formValues)
-  
+    let body = {...formValues};
+    body.id_usuario = sessionStorage.getItem('login');
       fetch(`${process.env.REACT_APP_BACKEND_PATH}/productos`,{
         method: 'POST',
-        body: JSON.stringify(formValues),
+        body: JSON.stringify(body),
         headers:{
           'Content-Type': 'application/json'
         }
@@ -56,9 +57,6 @@ const CrearProductos = () => {
           </Col>
           <Col>
           <Form.Control className="mb-3" onChange={changeField} value={formValues.estado} name="estado" type="text" placeholder="Estado " />
-          </Col>
-          <Col>
-          <Form.Control className="mb-3" onChange={changeField} value={formValues.usuario} name="usuario" type="number" placeholder="Usuario" />
           </Col>
           <Col>
           <Button type="submit" onClick={submit} variant="outline-success">
